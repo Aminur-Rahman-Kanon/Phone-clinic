@@ -1,0 +1,19 @@
+.Backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.html {
+    overflow: hidden;
+}
+
+.body {
+    overflow: hidden;
+}

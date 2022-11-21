@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=PT+Serif&family=Roboto:wght@100&display=swap');
+
+.NavigationItem {
+    padding: 5px;
+    margin: 0 5px;
+    list-style: none;
+    font-family: 'Island Moments', cursive;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    cursor: pointer;
+}
+
+.NavigationItem button {
+    color: #000000;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: 0.99rem;
+    font-family: 'PT Serif', serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.NavigationItem button:hover {
+    color: #5896e3;
+    background: none;
+}
+
+.NavigationItem button.active {
+    padding: 5px 0;
+    border-bottom: 2px solid #5896e3;
+    color: #5896e3;
+}
+
+
+.NavigationItem p, a {
+    color: #000000;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: 0.99rem;
+    text-decoration: none;
+}
+
+.NavigationItem a.active {
+    padding: 5px 0;
+    border-bottom: 2px solid #5896e3;
+    color: #5896e3;
+}
+
+.nestedLink a:hover {
+    color: #5896e3;
+    padding: 5px 0;
+}
+
+.NavigationItem a:hover {
+    color: #5896e3;
+    padding: 5px 0;
+}
+
+.nestedLink {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    z-index: 120;
+    background-color: #e4ecf3;
+    flex-flow: column;
+    list-style: none;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #bcdae182;
+}
+
+.nestedLinkOn {
+    display: flex;
+}
+
+.nestedLink a {
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.NavigationItem p {
+    margin: auto;
+    text-transform: uppercase;
+    color: #857a7a;
+}
+
+.NavigationItem:hover > .nestedLink {
+    display: flex;
+}
+
+.NavigationItem:hover > .nestedLink a {
+    padding: 0px;
+}
+
+@media (max-width: 025px) {
+    .nestedLink {
+        top: -70px;
+        left: -180px;
+    }
+}
+
+@media (max-width:320px) and (max-height:480px ) {
+    .nestedLink {
+        left: -150px;
+    }
+}

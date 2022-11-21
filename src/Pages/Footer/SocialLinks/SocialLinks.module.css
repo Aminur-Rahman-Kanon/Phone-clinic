@@ -1,0 +1,68 @@
+.Main {
+    width: 25%;
+    min-width: 250px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Main ul {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Main h2 {
+    font-size: 33px;
+    color: #EEEEEE;
+}
+
+.Main p {
+    font-size: 21px;
+    color: #EEEEEE;
+}
+
+
+
+.Main ul li {
+    list-style: none;
+    
+}
+
+.Main ul li a {
+    color: #EEEEEE;
+
+}
+
+#fb:hover {
+    color: #6985bd;
+}
+
+#in:hover{
+    color: #e95950;
+}
+
+#yt:hover {
+    color: #c4302b;
+}
+
+#tw:hover {
+    color: #00acee
+}
+@media (max-width: 400px){
+    .Main h2 {
+        font-size: 20px;
+    }
+
+    .Main p {
+        font-size: 16px;
+    }
+
+    .Main ul {
+        width: 95%;
+    }
+}

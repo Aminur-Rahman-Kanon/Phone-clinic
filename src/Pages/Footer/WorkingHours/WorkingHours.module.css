@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Island+Moments&family=Josefin+Sans&family=Luxurious+Roman&family=Open+Sans:wght@300&family=PT+Serif&family=Permanent+Marker&family=Roboto:wght@100&display=swap');
+
+
+.Main {
+    width: 50%;
+    min-width: 233px;
+    margin: 0 auto;
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Luxurious Roman', cursive;
+}
+
+.Main h3 {
+    color: #EEEEEE
+}
+
+.Main ul li p {
+    color: #EEEEEE;
+    font-weight: 600;
+}
+
+.Main ul {
+    padding: 0;
+    list-style: none;
+}
+
+.Main ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEEEEE;
+}
+
+.Main ul li p {
+    width: 223px;
+    margin: 16px;
+}
+
+@media (max-width: 449px) {
+    .Main {
+        width: 100%;
+    }
+}

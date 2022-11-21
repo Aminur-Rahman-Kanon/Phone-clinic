@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Island+Moments&family=Josefin+Sans&family=Luxurious+Roman&family=Open+Sans:wght@300&family=PT+Serif&family=Permanent+Marker&family=Roboto:wght@100&display=swap');
+
+.ServiceMain {
+    width: 100%;
+    /* height: 620px; */
+    overflow: hidden;
+}
+
+.ServiceMain h2 {
+    font-family: 'PT Serif', serif;
+    color: #3a7ed9;
+}
+
+.ServiceMain a {
+    text-decoration: none;
+    padding: 20px;
+}
+
+.ServiceMain .Ext {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #4954646e;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    box-shadow: 3px 3px 12px 8px #bcd8e5;
+    font-family: 'PT Sans Narrow', sans-serif;;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,29 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginItem {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.loginItem:hover > .loginIcon, .loginItem:hover > .loginDetails{
+    color: #5692e2;
+}
+
+.loginIcon {
+    color: grey;
+    font-size: 25px;
+}
+
+.loginDetails {
+    margin: 2px;
+    font-size: 13px;
+    color: grey;
+}
