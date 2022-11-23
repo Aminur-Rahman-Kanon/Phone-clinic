@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Aux from "../../../../Hoc/Aux/Aux";
 import bgLaptop from '../../../../Assets/Images/shop/laptop/laptopSale.png';
 import delivery from '../../../../Assets/Images/Accessories/pcAccesories/Logo/delivery.png';
 import gift from '../../../../Assets/Images/Accessories/pcAccesories/Logo/gift.png';
@@ -12,9 +11,8 @@ import laptopAccessory from '../../../../Assets/Images/shop/laptop/laptopAccesso
 import phoneAccessory from '../../../../Assets/Images/others/phoneAccessory.jpg';
 import tabletAccessory from '../../../../Assets/Images/tablet/tabletAccessory.jpg';
 import GetAquote from "../../../../Extra/GetAqoute/GetAquote";
-import withParams from "../../../../Hoc/Aux/withparams/withParams";
-import { connect } from 'react-redux';
-
+import withParams from "../../../../Hoc/withparams/withParams";
+import { accessories, phone, phoneLogo, tablet, tabletPic, pcCategory, laptop, pcImage } from "../../../../data/data";
 
 
 class PcMain extends Component {
@@ -22,18 +20,12 @@ class PcMain extends Component {
     componentDidMount () {
         window.scrollTo(0, 0);
     }
-    
-    // componentDidUpdate () {
-    //         window.location.reload(false)
-    //     }
 
     render () {
-
         let {queryId, deviceId} = this.props.params;
-        console.log(queryId, deviceId);
         let img = null;
         let details = null;
-        let pcCategory = null;
+        let pcCategories = null;
 
         if (deviceId === 'laptop' && queryId === 'sale'){
             img = <img src={bgLaptop} alt="BgLaptop"/>;
@@ -43,8 +35,8 @@ class PcMain extends Component {
                 <p>Buy All the parts you need for your personal computer.</p>
             </div>
 
-            pcCategory = <PcCategory data={this.props.laptopSale} 
-                                    img={this.props.laptopSalePic} 
+            pcCategories = <PcCategory data={laptop.brand} 
+                                    img={laptop.logo} 
                                     device={deviceId}
                                     query={queryId} />
         }
@@ -57,8 +49,8 @@ class PcMain extends Component {
                 <p>Buy All the parts you need for your personal computer.</p>
             </div>
 
-            pcCategory = <PcCategory data={this.props.laptopAcc} 
-                                    img={this.props.laptopAccPic} 
+            pcCategories = <PcCategory data={pcCategory} 
+                                    img={pcImage} 
                                     device={deviceId}
                                     query={queryId} />
         }
@@ -72,8 +64,8 @@ class PcMain extends Component {
 
             </div>
 
-            pcCategory = <PcCategory data={this.props.tabletSale} 
-                                    img={this.props.tabletSalePic} 
+            pcCategories = <PcCategory data={tablet} 
+                                    img={tabletPic} 
                                     device={deviceId}
                                     query={queryId} />
         }
@@ -86,8 +78,8 @@ class PcMain extends Component {
 
             </div>
 
-            pcCategory = <PcCategory data={this.props.tabletAcc} 
-                                    img={this.props.tabletAccPic} 
+            pcCategories = <PcCategory data={accessories.tablet} 
+                                    img={accessories.tabletImg}
                                     device={deviceId}
                                     query={queryId} />
         }
@@ -99,8 +91,8 @@ class PcMain extends Component {
                 <p>Buy New and Used Smart Phnoes</p>
             </div>
 
-            pcCategory = <PcCategory data={this.props.phoneSale} 
-                                    img={this.props.phoneSalePic} 
+            pcCategories = <PcCategory data={phone} 
+                                    img={phoneLogo} 
                                     device={deviceId}
                                     query={queryId} />
         }
@@ -112,20 +104,18 @@ class PcMain extends Component {
                 <p>Buy All the Accesories you need for your SmartPhones</p>
             </div>
 
-            pcCategory = <PcCategory data={this.props.phoneAcc} 
-                                    img={this.props.phoneAccPic} 
+            pcCategories = <PcCategory data={accessories.phone}
+                                    img={accessories.phoneImg}
                                     device={deviceId}
                                     query={queryId} />
         }
         
-
         return (
-            <Aux>
+            <>
                 <div className={styles.Main}>
                     <div className={styles.Pic}>
                         {img}
                     </div>
-
                     {details}
                 </div>
         
@@ -149,45 +139,20 @@ class PcMain extends Component {
 
                 <div className={styles.Intro1}>
                     <h2>Currently we don't have online purchasing<br></br>
-                    To buy a {this.props.device}. All you have to do is:</h2>
+                    To buy a {deviceId} {queryId}. All you have to do is:</h2>
                     <div style={{margin: '10px'}}>
-                        <ul className={styles.Intro1List}>
-                            <li>Select your Phone's Make (Brand)</li>
-                            <li>Select your Phone's Model</li>
-                            <li>Fill up the form or Call us on 020 7237 2724 <br></br> To check the availabilities and price</li>
-                        </ul>
+                        <p>Fill up the form by selecting one of the category below or Call us on 020 7237 2724 To check the availabilities and price</p>
                     </div>
                 </div>
         
                 <div>
-                    {pcCategory}
+                    {pcCategories}
                 </div>
 
                 <GetAquote device={this.props.device}/>
-        
-            </Aux>
+            </>
         )
-        
-    }
-
-}
-
-const mapStateToProps = state => {
-    return {
-        phoneAcc: state.accessories.phone,
-        phoneSale: state.brand,
-        phoneAccPic: state.accessories.phoneImg,
-        phoneSalePic: state.phoneLogo,
-        tabletAcc: state.accessories.tablet,
-        tabletSale: state.tablet,
-        tabletAccPic: state.accessories.tabletImg,
-        tabletSalePic: state.tabletPic,
-        laptopAcc: state.pcCategory,
-        laptopSale: state.laptop.brand,
-        laptopAccPic: state.pcImage,
-        laptopSalePic: state.laptop.logo
     }
 }
 
-
-export default connect( mapStateToProps ) (withParams(PcMain));
+export default withParams(PcMain);

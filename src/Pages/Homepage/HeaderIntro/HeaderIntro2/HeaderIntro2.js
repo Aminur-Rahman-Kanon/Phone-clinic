@@ -16,8 +16,6 @@ const HeaderIntro2 = () => {
         aos.init({duration:1300})
     }, [])
 
-    console.log('headeIntro2');
-
     return (
         <div className={styles.HeaderIntro2}>
             <div className={styles.Container} data-aos="fade-right" data-aos-once="true">

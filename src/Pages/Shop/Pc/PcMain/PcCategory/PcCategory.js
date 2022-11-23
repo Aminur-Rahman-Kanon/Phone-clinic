@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PcItems from '../../PcItems/PcItems';
-import Aux from '../../../../../Hoc/Aux/Aux';
 import styles from './PcCategory.module.css';
 
 class PcCategory extends Component {
-
-    // componentDidMount () {
-    //     console.log('pcCategory');
-    // }
 
     shouldComponentUpdate (prevProps) {
         if (prevProps.device !== this.props.device){
@@ -92,19 +87,14 @@ class PcCategory extends Component {
             })
         }
         
-
-        
-        
         return (
-            <Aux>
-                <div className={styles.Main}>
-                    {this.props.device === 'pc' ? <h2>Shop By Category</h2> : null}
-                    
-                    <div className={styles.Shop}>
-                        {item}
-                    </div>
+            <div className={styles.Main}>
+                {this.props.device === 'pc' ? <h2>Shop By Category</h2> : null}
+                
+                <div className={styles.Shop}>
+                    {item}
                 </div>
-            </Aux>
+            </div>
         )
     }
 }

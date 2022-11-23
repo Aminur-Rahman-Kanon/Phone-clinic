@@ -290,6 +290,42 @@ Button:hover{
     }
 }
 
+.msgContainer {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.msgBody {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.msgBtn {
+    height: 35px;
+    width: 150px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    color: grey;
+    cursor: pointer;
+}
+
+.msgBtn:hover {
+    background-color: #5894e2;
+    color: white;
+}
+
 @media (max-width: 912px) {
     .Form {
         height: auto;

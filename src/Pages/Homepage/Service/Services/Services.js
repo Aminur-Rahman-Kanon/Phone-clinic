@@ -5,8 +5,6 @@ import 'aos/dist/aos.css';
 
 const Services = (props) => {
 
-    console.log('services')
-
     return (
         <div  data-aos="zoom-in-up" data-aos-easing="ease-out-cubic" data-aos-once="true" data-aos-duration="1500" className={styles.Services}>
             <span className={styles.Icon}>

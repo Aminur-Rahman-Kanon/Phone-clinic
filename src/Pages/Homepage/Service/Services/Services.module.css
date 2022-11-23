@@ -1,4 +1,5 @@
 .Services {
+    min-height: 165px;
     width: 220px;
     display: flex;
     flex-flow: column;
@@ -7,7 +8,6 @@
 
 
 .Icon {
-    /* height: 155px; */
     width: 75%;
     display: flex;
     flex-flow: column;
@@ -24,7 +24,8 @@
 }
 
 .Services p{
-    color: #000000e0;
+    color: white;
+    font-weight: 600;
 }
 
 .Services span:hover {

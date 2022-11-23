@@ -6,9 +6,9 @@ const DrawToggle = (props)  => {
 
     return (
         <div className={styles.Drawtoggle} onClick={props.switch}>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
         </div>
     )
 }

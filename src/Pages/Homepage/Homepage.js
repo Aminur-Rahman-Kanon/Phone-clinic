@@ -11,19 +11,15 @@ import clipboard from '../../Assets/Images/others/clipboard.png';
 import delivery from '../../Assets/Images/others/delivery.png';
 import styles from './Homepage.module.css'
 
-
 class HomePage extends Component {
 
     componentDidMount() {
         if (window.location.pathname === '/service'){
             document.getElementById('service').scrollIntoView();
         }
-        
     }
 
-
-    render () {
-        
+    render () {        
         return (
             <div>                            
                 <HeaderIntro1 />

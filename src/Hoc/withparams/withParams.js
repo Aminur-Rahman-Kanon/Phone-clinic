@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { useParams, useLocation } from 'react-router-dom';
 
 function withParams(Component) {

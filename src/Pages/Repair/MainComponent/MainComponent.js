@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import Aux from "../../../Hoc/Aux/Aux";
 import styles from './MainComponent.module.css';
 import RepairConsole from "./RepairConsole/RepairConsole";
 import GetAquote from "../../../Extra/GetAqoute/GetAquote";
 import bgPhone from '../../../Assets/Images/others/phone.png';
 import bgTablet from '../../../Assets/Images/others/tablet.png';
 import bgLaptop from '../../../Assets/Images/others/laptop.png';
-import withParams from "../../../Hoc/Aux/withparams/withParams";
-import { connect } from 'react-redux'
-
-
-
+import withParams from "../../../Hoc/withparams/withParams";
+import { phone, phoneLogo, tablet, tabletPic, laptop } from "../../../data/data";
 
 class MainComponent extends Component {
 
@@ -26,12 +22,8 @@ class MainComponent extends Component {
         window.scrollTo(0,0);
     }
 
-
     render () {
-
         const {deviceId} = this.props.params;
-
-        console.log(deviceId);
 
         let backgound = null;
 
@@ -46,22 +38,20 @@ class MainComponent extends Component {
 
         //phone
         if (deviceId === 'phone') {
-            repairConsole = <RepairConsole Data={this.props.phone} img={this.props.phonePic} device={deviceId} />
+            repairConsole = <RepairConsole Data={phone} img={phoneLogo} device={deviceId} />
         }
         
         //tablet
         if (deviceId === 'tablet') {
-            repairConsole = <RepairConsole Data={this.props.tablet} img={this.props.tabletPic} device={deviceId} />
+            repairConsole = <RepairConsole Data={tablet} img={tabletPic} device={deviceId} />
         }
 
         //laptop
         if (deviceId === 'laptop') {
-            repairConsole = <RepairConsole Data={this.props.laptop} img={this.props.laptopPic} device={deviceId} />
+            repairConsole = <RepairConsole Data={laptop.title} img={laptop.laptopPic} device={deviceId} />
         }
         return (
-    
-            <Aux>
-
+            <>
                 <div className={styles.Main}>
                     <div className={styles.MainImg}>
                         <img src={backgound} alt={backgound} />
@@ -85,7 +75,6 @@ class MainComponent extends Component {
                     </div>
                 </div>
     
-    
                 <div className={styles.SelectPhone}>
                     {deviceId === "laptop" ? <h2>Our Services</h2> : <h2>Select Your Device</h2>}
                     {repairConsole}
@@ -96,25 +85,10 @@ class MainComponent extends Component {
                     <p>All our Phone Clinic stores have dedicated technicians that specialise in repairing and finding the best solution to fix your Mac. We provide a range of repairs for Macbooks and iMac which include screen replacement, battery replacement, keyboard replacement, touchpad replacement,
                         charging issues, liquid diagnostics, and data diagnostics. Book a free consultation and our technicians will provide the best solution to get your device fixed.</p>
                 </div>
-
                 <GetAquote device={this.props.device}/>
-    
-            </Aux>
+            </>
         )
     }
-
 }
 
-const mapStateToProps = (state) => {
-    return {
-        phone: state.brand,
-        phonePic: state.phoneLogo,
-        tablet: state.tablet,
-        tabletPic: state.tabletPic,
-        laptop: state.laptop.title,
-        laptopPic: state.laptop.laptopPic
-    }
-}
-
-
-export default connect( mapStateToProps ) (withParams(MainComponent));
+export default withParams(MainComponent);

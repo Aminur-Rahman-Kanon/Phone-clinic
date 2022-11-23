@@ -2,12 +2,10 @@
 
 .ServiceMain {
     width: 100%;
-    /* height: 620px; */
     overflow: hidden;
 }
 
 .ServiceMain h2 {
-    font-family: 'PT Serif', serif;
     color: #3a7ed9;
 }
 
@@ -25,10 +23,10 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #4954646e;
+    /* background-color: #4954646e; */
+    background-image: linear-gradient(360deg, rgb(107, 107, 107), rgb(48, 47, 47));
     border: 1px solid lightgray;
     border-radius: 20px;
     box-shadow: 3px 3px 12px 8px #bcd8e5;
-    font-family: 'PT Sans Narrow', sans-serif;;
     letter-spacing: 1px;
 }

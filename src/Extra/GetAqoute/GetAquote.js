@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from './GetAquote.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
@@ -22,4 +22,4 @@ const GetAquote = (props) => {
     )
 }
 
-export default React.memo(GetAquote);
+export default GetAquote;

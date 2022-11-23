@@ -13,8 +13,6 @@ import { Link } from 'react-router-dom';
 
 const ServiceMain = () => {
 
-    console.log('serviceMain')
-
     return (
         <div id="service" className={styles.ServiceMain}>
             <h2>What you are Looking For Today . . .</h2>

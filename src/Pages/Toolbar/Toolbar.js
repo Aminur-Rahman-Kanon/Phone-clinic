@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import DrawToggle from "../Drawtoggle/Drawtoggle";
 import Logo from "../Logo/Logo";
 import NavigationItems from "../Navigation/NavigationItems/NavigationItems";
-import Login from "../Navigation/Login/login";
+import SidePanel from "../Navigation/sidePanel/sidePanel";
 import styles from './Toolbar.module.css';
 
 const Toolbar = (props) => {
@@ -14,7 +14,7 @@ const Toolbar = (props) => {
                 <NavigationItems />
             </nav>
             <div className={styles.login}>
-                <Login />
+                <SidePanel />
             </div>
             <DrawToggle switch={props.switchBar}/>
         </div>

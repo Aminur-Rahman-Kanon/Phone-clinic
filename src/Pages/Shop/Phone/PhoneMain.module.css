@@ -14,7 +14,7 @@
 }
 
 .Main img {
-    width: 80%;
+    width: 60%;
     height: auto;
     max-height: 460px;
 }
@@ -47,19 +47,21 @@
     flex-flow: column;
 }
 
-.Subheading a {
-    height: 48px;
-    width: 200px;
-    border-radius: 20px;
-    background-color: #7d7990;
-    border: 1px solid transparent;
-    color: #e7eaf1;
-    letter-spacing: 1px;
+.repairLink {
     cursor: pointer;
     text-decoration: none;
+    height: 40px;
+    width: 200px;
+    border: 1px solid none;
+    border-radius: 20px;
+    background-color: #7d7990;
+    color: #e7eaf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Subheading a:hover {
+.repairLink:hover {
     background-color: #6f659e;
     color: #ffffff;
     font-weight: bolder;

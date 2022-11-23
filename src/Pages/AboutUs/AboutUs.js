@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import styles from './AboutUs.module.css';
-import Aux from '../../Hoc/Aux/Aux';
 import aboutUsImage from '../../Assets/Images/others/aboutUs.jpg';
 import call from '../../Assets/Images/others/dial.png';
 import email from '../../Assets/Images/others/email.png';
@@ -12,7 +11,7 @@ import exchange from '../../Assets/Images/others/exchange.png';
 import accessories from '../../Assets/Images/others/accessories.png';
 
 
-const AboutUs = (props) => {
+const AboutUs = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -22,10 +21,8 @@ const AboutUs = (props) => {
         }
     }, [])
 
-
     return (
-        <Aux>
-
+        <>
             <div className={styles.Main}>
                 <div className={styles.MainImg}>
                     <img src={aboutUsImage} alt="about us"/>
@@ -135,8 +132,8 @@ const AboutUs = (props) => {
                 </div>
             </div>
 
-        </Aux>
+        </>
     )
 }
 
-export default React.memo(AboutUs);
+export default AboutUs;

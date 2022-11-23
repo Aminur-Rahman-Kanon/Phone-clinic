@@ -6,8 +6,6 @@ import styles from './whyChooseUsMain.module.css';
 
 const WhyChooseUsMain = () => {
 
-    console.log('whyChooseUSMain');
-
     return (
         <div className={styles.Main}>
             <h2>Why Choose Us</h2>

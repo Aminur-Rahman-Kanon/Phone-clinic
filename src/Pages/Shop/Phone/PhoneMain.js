@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
-import Aux from '../../../Hoc/Aux/Aux';
 import bgPhone from '../../../Assets/Images/others/phone.png';
 import bgTablet from '../../../Assets/Images/tablet/tabletRepair.png';
 import bgLaptop from '../../../Assets/Images/shop/laptop/laptopRepair.png';
-// import aos from 'aos';
+import aos from 'aos';
 import 'aos/dist/aos.css';
 import styles from './PhoneMain.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,10 +14,8 @@ const PhoneMain = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        // aos.init({duration: 1500});
+        aos.init({duration: 1500});
     }, []);
-
-    console.log('phoneMain')
 
     //Defining Jsx Logically according to the device;
 
@@ -58,17 +55,17 @@ const PhoneMain = (props) => {
     }
 
     return (
-        <Aux>
+        <>
             <div className={styles.Main}>
                 <div className={styles.Heading}>
                     <h1>PHONE CLINIC</h1>
                     <div className={styles.Subheading}>
-                        <Link to={dir1}><p>Take me to Repair</p></Link>
+                        <Link to={dir1} className={styles.repairLink}>Take me to repair</Link>
                         {buyDeviceHeader}
                     </div>
                 </div>
                 <div data-aos="fade-left" data-aos-easing="ease-out-cubic" className={styles.Img}>
-                    <img src={backgroundPic} />
+                    <img src={backgroundPic} alt="phone clinic"/>
                 </div>
             </div>
 
@@ -96,10 +93,9 @@ const PhoneMain = (props) => {
                             {fontIconHeaderParts}
                         </div>
                     </Link>
-                </div>
-                
+                </div>      
             </div>
-        </Aux>
+        </>
     )
 }
 

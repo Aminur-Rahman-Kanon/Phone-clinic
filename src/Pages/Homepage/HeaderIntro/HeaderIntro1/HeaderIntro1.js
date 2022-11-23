@@ -4,8 +4,6 @@ import styles from './HeaderIntro1.module.css';
 
 const HeaderIntro1 = () => {
 
-    console.log('headerIntro1')
-
     return (
         <div className={styles.HeaderIntro1}>
             <h2><strong>Excellent Services For Repairing Your Broken Gadget</strong></h2>

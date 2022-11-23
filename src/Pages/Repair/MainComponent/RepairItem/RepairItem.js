@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styles from './RepairItem.module.css';
-import Aux from "../../../../Hoc/Aux/Aux";
 
 
 class RepairItem extends Component {
@@ -26,12 +25,10 @@ class RepairItem extends Component {
         }
 
         return (
-            <Aux>
-                <Link to={dir} className={styles.Main} style={{padding: padding}} >
-                    <img src={this.props.img} alt={this.props.img}/>
-                    <p>{this.props.model}</p>
-                </Link>                
-            </Aux>
+            <Link to={dir} className={styles.Main} style={{padding: padding}} >
+                <img src={this.props.img} alt={this.props.img}/>
+                <p>{this.props.model}</p>
+            </Link>
         )
 
     }

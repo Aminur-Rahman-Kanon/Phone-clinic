@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
 import styles from './CyberCafe.module.css';
-import Aux from '../../../Hoc/Aux/Aux';
-import Toolbar from "../../Toolbar/Toolbar";
-import SideDrawer from "../../Sidedrawer/Sidedrawer";
-import FooterMain from "../../Footer/FooterMain/FooterMain";
 import cafe from '../../../Assets/Images/others/cafe.png';
 import copy from '../../../Assets/Images/others/copy.png';
 import printer from '../../../Assets/Images/others/printer.png';
@@ -11,19 +7,15 @@ import aos from 'aos';
 import 'aos/dist/aos.css';
 
 
-const CyberCafe = (props) => {
+const CyberCafe = () => {
 
     useEffect(() => {
         aos.init();
         window.scrollTo(0, 0);
     }, [])
 
-    console.log('cyberCafe')
-
-
     return (
-        <Aux>
-
+        <>
             <div className={styles.HeaderMain}>
                 <div className={styles.HeaderPara}>
                     <h2>Browse the Internet</h2>
@@ -64,8 +56,7 @@ const CyberCafe = (props) => {
                 </div>
             </div>
 
-        </Aux>
-
+        </>
     )
 }
 
